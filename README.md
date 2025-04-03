@@ -63,4 +63,5 @@ API 테스트 툴 : artillery
     전화번호 검색: /patients?page=1&limit=20&phoneNumber=01043888387
     차트번호 검색: /patients?page=1&limit=20&chartNumber=850382
 
+->load_test_results.json.html 파일 확인하여 결과 보기 가능합니다.
 ~~~
