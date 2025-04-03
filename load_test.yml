@@ -1,0 +1,22 @@
+config:
+  target: "http://localhost:3000"
+  phases:
+    - duration: 60  # 테스트 지속 시간
+      arrivalRate: 5 # 5개의 요청
+  defaults:
+    headers:
+      Content-Type: "application/json"
+
+scenarios:
+  - flow:
+      - get:
+          url: "/patients?page=1&limit=20"  # 전체 목록 조회
+
+      - get:
+          url: "/patients?page=1&limit=20&name=이예원"  # 특정 이름 검색
+
+      - get:
+          url: "/patients?page=1&limit=20&phoneNumber=01043888387"  # 특정 전화번호 검색
+
+      - get:
+          url: "/patients?page=1&limit=20&chartNumber=850382"  # 특정 차트번호 검색
